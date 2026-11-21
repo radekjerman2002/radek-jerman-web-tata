@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Radek Jerman – Obrazy</title>
-<meta name="description" content="Radek Jerman – malíř z Jablonce nad Nisou. Painting murals and portraits.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radek Jerman – Works</title>
+<meta name="description" content="Radek Jerman – painter from Jablonec nad Nisou, Czech Republic. Vividly colourful acrylic paintings and portraits.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Radek Jerman – Obrazy">
-<meta property="og:description" content="Radek Jerman – malíř z Jablonce nad Nisou. Painting murals and portraits.">
+<meta property="og:title" content="Radek Jerman – Works">
+<meta property="og:description" content="Radek Jerman – painter from Jablonec nad Nisou, Czech Republic. Vividly colourful acrylic paintings and portraits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
@@ -29,47 +30,51 @@
 </defs>
 </svg>
 <span class="name">Radek Jerman</span><span class="tag">Painting murals and portraits</span></span>
- <img class="photo" src="radek-jerman.jpg" alt="Radek Jerman" width="316" height="316"></a>
- <nav>
-  <a href="#obrazy" data-cs="Obrazy" data-en="Works">Obrazy</a>
-  <a href="#o-mne" data-cs="O mně" data-en="About">O mně</a>
-  <a href="#kontakt" data-cs="Kontakt" data-en="Contact">Kontakt</a>
+ <img class="photo" src="images/radek-jerman.jpg" alt="Radek Jerman" width="316" height="316"></a>
+ <button type="button" class="menu-btn" id="menubtn" aria-expanded="false" aria-controls="nav"><i aria-hidden="true"></i><span class="ml" data-cs="Menu" data-en="Menu">Menu</span><span class="mc" data-cs="Zavřít" data-en="Close">Close</span></button>
+ <nav id="nav">
+  <a href="#obrazy" data-cs="Obrazy" data-en="Works">Works</a>
+  <a href="#o-mne" data-cs="O mně" data-en="About">About</a>
+  <a href="#kontakt" data-cs="Kontakt" data-en="Contact">Contact</a>
   <div class="lang"><button data-l="cs" aria-pressed="true">CZ</button><button data-l="en" aria-pressed="false">EN</button></div>
  </nav>
 </header>
 <main>
-<!-- Obrazy: fotky do složky  (obraz-1.jpg ... obraz-6.jpg). Další obraz = zkopíruj celý <figure>. -->
+<!-- Works: add a photo to images/ and copy one whole <figure>. -->
  <div class="view" id="v-obrazy">
- <div class="title"><h1 data-cs="Obrazy" data-en="Works">Obrazy</h1><p>Painting murals and portraits</p>
-  <div class="arrows"><button type="button" id="gprev" aria-label="Předchozí obrazy / Previous"><svg viewBox="0 0 28 12" width="28" height="12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M27 6H1M6 1L1 6l5 5"/></svg></button><button type="button" id="gnext" aria-label="Další obrazy / Next"><svg viewBox="0 0 28 12" width="28" height="12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M1 6h26M22 1l5 5-5 5"/></svg></button></div></div>
+ <div class="title"><h1 data-cs="Obrazy" data-en="Works">Works</h1><p>Painting murals and portraits</p>
+  <div class="arrows"><span class="count" id="gcount"></span><button type="button" id="gprev" aria-label="Previous"><svg viewBox="0 0 28 12" width="28" height="12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M27 6H1M6 1L1 6l5 5"/></svg></button><button type="button" id="gnext" aria-label="Next"><svg viewBox="0 0 28 12" width="28" height="12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M1 6h26M22 1l5 5-5 5"/></svg></button></div></div>
  <div class="gallery" tabindex="0" aria-label="Gallery">
-  <figure class="work"><div class="frame"><img src="obraz-01-zenska-tvar.jpg" width="900" height="1200" alt="Radek Jerman – Ženská tvář"></div><h3 data-cs="Ženská tvář" data-en="Woman’s Face">Ženská tvář</h3><span>100 × 140 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-02-zenska-tvar.jpg" width="1002" height="1400" alt="Radek Jerman – Ženská tvář"></div><h3 data-cs="Ženská tvář" data-en="Woman’s Face">Ženská tvář</h3><span>100 × 140 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-03-cuba-domorodkyne.jpg" width="992" height="1400" alt="Radek Jerman – Cuba domorodkyně"></div><h3 data-cs="Cuba domorodkyně" data-en="Cuba – Native Woman">Cuba domorodkyně</h3><span>50 × 70 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-04-oblicej.jpg" loading="lazy" decoding="async" width="779" height="1200" alt="Radek Jerman – Obličej"></div><h3 data-cs="Obličej" data-en="Face">Obličej</h3><span>100 × 140 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-05-oblicej.jpg" loading="lazy" decoding="async" width="836" height="1200" alt="Radek Jerman – Obličej"></div><h3 data-cs="Obličej" data-en="Face">Obličej</h3><span>100 × 140 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-06-tri-tvare.jpg" loading="lazy" decoding="async" width="1200" height="675" alt="Radek Jerman – Tři tváře"></div><h3 data-cs="Tři tváře" data-en="Three Faces">Tři tváře</h3><span></span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-07-tri-tvare.jpg" loading="lazy" decoding="async" width="1200" height="675" alt="Radek Jerman – Tři tváře"></div><h3 data-cs="Tři tváře" data-en="Three Faces">Tři tváře</h3><span></span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-08-sylvester-stallone.jpg" loading="lazy" decoding="async" width="1035" height="1400" alt="Radek Jerman – Sylvester Stallone"></div><h3 data-cs="Sylvester Stallone" data-en="Sylvester Stallone">Sylvester Stallone</h3><span>90 × 120 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-09-cuba-domorodkyne.jpg" loading="lazy" decoding="async" width="720" height="1009" alt="Radek Jerman – Cuba domorodkyně"></div><h3 data-cs="Cuba domorodkyně" data-en="Cuba – Native Woman">Cuba domorodkyně</h3><span>50 × 70 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-10-zakryta-tvar.jpg" loading="lazy" decoding="async" width="495" height="1400" alt="Radek Jerman – Zakrytá tvář"></div><h3 data-cs="Zakrytá tvář" data-en="Covered Face">Zakrytá tvář</h3><span>60 × 160 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-11-dve-tvare.jpg" loading="lazy" decoding="async" width="676" height="1200" alt="Radek Jerman – Dvě tváře"></div><h3 data-cs="Dvě tváře" data-en="Two Faces">Dvě tváře</h3><span></span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-12-jean-claude-van-damme.jpg" loading="lazy" decoding="async" width="1025" height="1400" alt="Radek Jerman – Jean Claude van Damme"></div><h3 data-cs="Jean Claude van Damme" data-en="Jean Claude van Damme">Jean Claude van Damme</h3><span>90 × 120 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-13-oblicej.jpg" loading="lazy" decoding="async" width="652" height="907" alt="Radek Jerman – Obličej"></div><h3 data-cs="Obličej" data-en="Face">Obličej</h3><span>100 × 140 cm</span></figure>
-  <figure class="work"><div class="frame"><img src="obraz-14-oblicej-detail.jpg" loading="lazy" decoding="async" width="788" height="1400" alt="Radek Jerman – Obličej – detail"></div><h3 data-cs="Obličej – detail" data-en="Face – detail">Obličej – detail</h3><span>100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/scent-of-havana.jpg" width="1133" height="1600" alt="Radek Jerman – Scent of Havana"></div><h3 data-cs="Vůně Havany" data-en="Scent of Havana">Scent of Havana</h3><span data-cs="Akrylové barvy · 50 × 70 cm" data-en="Acrylic paints · 50 × 70 cm">Acrylic paints · 50 × 70 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/portrait-1.jpg" width="1080" height="1475" alt="Radek Jerman – Portrait"></div><h3 data-cs="Portrét" data-en="Portrait">Portrait</h3><span data-cs="Akrylové barvy · 90 × 120 cm" data-en="Acrylic paints · 90 × 120 cm">Acrylic paints · 90 × 120 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/portrait-2.jpg" width="1183" height="1600" alt="Radek Jerman – Portrait"></div><h3 data-cs="Portrét" data-en="Portrait">Portrait</h3><span data-cs="Akrylové barvy · 90 × 120 cm" data-en="Acrylic paints · 90 × 120 cm">Acrylic paints · 90 × 120 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/shaman.jpg" loading="lazy" decoding="async" width="566" height="1600" alt="Radek Jerman – Shaman"></div><h3 data-cs="Šamanka" data-en="Shaman">Shaman</h3><span data-cs="Akrylové barvy · 60 × 160 cm" data-en="Acrylic paints · 60 × 160 cm">Acrylic paints · 60 × 160 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/desire.jpg" loading="lazy" decoding="async" width="1200" height="1600" alt="Radek Jerman – Desire"></div><h3 data-cs="Touha" data-en="Desire">Desire</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/a-look-in-colour.jpg" loading="lazy" decoding="async" width="779" height="1200" alt="Radek Jerman – A Look in Colour"></div><h3 data-cs="Pohled v barvách" data-en="A Look in Colour">A Look in Colour</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/a-look-in-colour-detail.jpg" loading="lazy" decoding="async" width="901" height="1600" alt="Radek Jerman – A Look in Colour – detail"></div><h3 data-cs="Pohled v barvách – detail" data-en="A Look in Colour – detail">A Look in Colour – detail</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/desire-close-up.jpg" loading="lazy" decoding="async" width="1002" height="1400" alt="Radek Jerman – Desire – close-up"></div><h3 data-cs="Touha – detail" data-en="Desire – close-up">Desire – close-up</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/scent-of-havana-with-the-artist.jpg" loading="lazy" decoding="async" width="720" height="1009" alt="Radek Jerman – Scent of Havana – with the artist"></div><h3 data-cs="Vůně Havany – s autorem" data-en="Scent of Havana – with the artist">Scent of Havana – with the artist</h3><span data-cs="Akrylové barvy · 50 × 70 cm" data-en="Acrylic paints · 50 × 70 cm">Acrylic paints · 50 × 70 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/desire-with-the-artist.jpg" loading="lazy" decoding="async" width="900" height="1200" alt="Radek Jerman – Desire – with the artist"></div><h3 data-cs="Touha – s autorem" data-en="Desire – with the artist">Desire – with the artist</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/a-look-in-colour-with-the-artist.jpg" loading="lazy" decoding="async" width="836" height="1200" alt="Radek Jerman – A Look in Colour – with the artist"></div><h3 data-cs="Pohled v barvách – s autorem" data-en="A Look in Colour – with the artist">A Look in Colour – with the artist</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/a-look-in-colour-on-display.jpg" loading="lazy" decoding="async" width="652" height="907" alt="Radek Jerman – A Look in Colour – on display"></div><h3 data-cs="Pohled v barvách – na výstavě" data-en="A Look in Colour – on display">A Look in Colour – on display</h3><span data-cs="Akrylové barvy · 100 × 140 cm" data-en="Acrylic paints · 100 × 140 cm">Acrylic paints · 100 × 140 cm</span></figure>
+  <figure class="work"><div class="frame"><img src="images/three-works.jpg" loading="lazy" decoding="async" width="1200" height="675" alt="Radek Jerman – Desire, A Look in Colour, Shaman"></div><h3 data-cs="Touha, Pohled v barvách, Šamanka" data-en="Desire, A Look in Colour, Shaman">Desire, A Look in Colour, Shaman</h3><span data-cs="Akrylové barvy" data-en="Acrylic paints">Acrylic paints</span></figure>
+  <figure class="work"><div class="frame"><img src="images/shaman-and-a-look-in-colour.jpg" loading="lazy" decoding="async" width="676" height="1200" alt="Radek Jerman – Shaman and A Look in Colour"></div><h3 data-cs="Šamanka a Pohled v barvách" data-en="Shaman and A Look in Colour">Shaman and A Look in Colour</h3><span data-cs="Akrylové barvy" data-en="Acrylic paints">Acrylic paints</span></figure>
  </div>
  </div>
  <div class="view" id="v-o-mne">
- <div class="title"><h1 data-cs="O mně" data-en="About">O mně</h1><p>Painting murals and portraits</p></div>
+ <div class="title"><h1 data-cs="O mně" data-en="About">About</h1><p>Painting murals and portraits</p></div>
  <div class="text">
+  <img class="about-photo" src="images/radek-jerman.jpg" alt="Radek Jerman" width="316" height="316">
   <h2>Radek Jerman</h2>
-  <p data-cs="Radek Jerman (nar. 1973) pochází z Jablonce nad Nisou, kde žije dodnes. Malování ho provází už od dětství a má své místo také v jeho rodině. Věnují se mu totiž i jeho maminka, bratr a syn." data-en="Radek Jerman (b. 1973) comes from Jablonec nad Nisou, where he still lives today. Painting has been with him since childhood and has its place in his family too, as his mother, brother and son paint as well.">Radek Jerman (nar. 1973) pochází z Jablonce nad Nisou, kde žije dodnes. Malování ho provází už od dětství a má své místo také v jeho rodině. Věnují se mu totiž i jeho maminka, bratr a syn.</p>
-  <p data-cs="Ve své tvorbě se zaměřuje především na výrazně barevné obrazy a portréty oblíbených osobností. Se všemi osobnostmi, které zachytil na svých obrazech, se později osobně setkal. Malování mu přináší uvolnění, pohodu a vnitřní radost." data-en="In his work he focuses mainly on vividly colourful paintings and portraits of favourite personalities. He later met every one of the personalities he has portrayed in person. Painting brings him relaxation, calm and inner joy.">Ve své tvorbě se zaměřuje především na výrazně barevné obrazy a portréty oblíbených osobností. Se všemi osobnostmi, které zachytil na svých obrazech, se později osobně setkal. Malování mu přináší uvolnění, pohodu a vnitřní radost.</p>
-  <p data-cs="Ve volném čase se věnuje sportu, zejména kulturistice, a rád cestuje po světě. Pro svou již třetí výstavu připravil průřez dosavadní tvorbou. Vybrané obrazy jsou k prodeji." data-en="In his free time he enjoys sport, especially bodybuilding, and loves travelling the world. For his third exhibition he has prepared a cross-section of his work to date. Selected paintings are for sale.">Ve volném čase se věnuje sportu, zejména kulturistice, a rád cestuje po světě. Pro svou již třetí výstavu připravil průřez dosavadní tvorbou. Vybrané obrazy jsou k prodeji.</p>
+  <p data-cs="Radek Jerman (nar. 1973) pochází z Jablonce nad Nisou v České republice, kde žije dodnes. Malování ho provází už od dětství a má své místo také v jeho rodině. Věnují se mu totiž i jeho maminka, bratr a syn." data-en="Radek Jerman (b. 1973) comes from Jablonec nad Nisou, Czech Republic, where he still lives today. Painting has been with him since childhood and has its place in his family too, as his mother, brother and son paint as well.">Radek Jerman (b. 1973) comes from Jablonec nad Nisou, Czech Republic, where he still lives today. Painting has been with him since childhood and has its place in his family too, as his mother, brother and son paint as well.</p>
+  <p data-cs="Ve své tvorbě se zaměřuje především na výrazně barevné akrylové obrazy a portréty oblíbených osobností. Se všemi osobnostmi, které zachytil na svých obrazech, se později osobně setkal. Malování mu přináší uvolnění, pohodu a vnitřní radost." data-en="In his work he focuses mainly on vividly colourful acrylic paintings and portraits of favourite personalities. He later met every one of the personalities he has portrayed in person. Painting brings him relaxation, calm and inner joy.">In his work he focuses mainly on vividly colourful acrylic paintings and portraits of favourite personalities. He later met every one of the personalities he has portrayed in person. Painting brings him relaxation, calm and inner joy.</p>
+  <p data-cs="Ve volném čase se věnuje sportu, zejména kulturistice, a rád cestuje po světě. Pro svou již třetí výstavu připravil průřez dosavadní tvorbou. Vybrané obrazy jsou k prodeji." data-en="In his free time he enjoys sport, especially bodybuilding, and loves travelling the world. For his third exhibition he has prepared a cross-section of his work to date. Selected paintings are for sale.">In his free time he enjoys sport, especially bodybuilding, and loves travelling the world. For his third exhibition he has prepared a cross-section of his work to date. Selected paintings are for sale.</p>
+  <p class="closing" data-cs="Každý obraz je impulzivní výzvou, která začíná prvním nápadem a končí posledním tahem štětce." data-en="Every painting is an impulsive challenge that begins with the first idea and ends with the last stroke of the brush.">Every painting is an impulsive challenge that begins with the first idea and ends with the last stroke of the brush.</p>
+  <p class="medium" data-cs="Akrylové barvy" data-en="Acrylic paints">Acrylic paints</p>
  </div>
  </div>
  <div class="view" id="v-kontakt">
- <div class="title"><h1 data-cs="Kontakt" data-en="Contact">Kontakt</h1><p>Painting murals and portraits</p></div>
+ <div class="title"><h1 data-cs="Kontakt" data-en="Contact">Contact</h1><p>Painting murals and portraits</p></div>
  <div class="contact">
   <a href="mailto:radekjerman@seznam.cz">RADEKJERMAN@SEZNAM.CZ</a>
   <a href="tel:+420607193398">+420 607 193 398</a>
@@ -77,16 +82,16 @@
  </div>
 </main>
 <section class="home offer" id="nabidka">
- <div><h2 data-cs="Co nabízím" data-en="What I offer">Co nabízím</h2><p class="lead">Painting murals and portraits</p></div>
+ <div><h2 data-cs="Co nabízím" data-en="What I offer">What I offer</h2><p class="lead">Painting murals and portraits</p></div>
  <ul>
-  <li><span class="n">01</span><h3 data-cs="Obrazy" data-en="Paintings">Obrazy</h3><p data-cs="Výrazně barevné obrazy. Vybrané kusy jsou k prodeji." data-en="Vividly colourful paintings. Selected pieces are for sale.">Výrazně barevné obrazy. Vybrané kusy jsou k prodeji.</p></li>
-  <li><span class="n">02</span><h3 data-cs="Portréty" data-en="Portraits">Portréty</h3><p data-cs="Portréty oblíbených osobností." data-en="Portraits of favourite personalities.">Portréty oblíbených osobností.</p></li>
-  <li><span class="n">03</span><h3 data-cs="Nástěnné malby" data-en="Murals">Nástěnné malby</h3><p data-cs="Malování přímo na zeď." data-en="Painting directly on the wall.">Malování přímo na zeď.</p></li>
+  <li><span class="n">01</span><h3 data-cs="Obrazy" data-en="Paintings">Paintings</h3><p data-cs="Výrazně barevné akrylové obrazy. Vybrané kusy jsou k prodeji." data-en="Vividly colourful acrylic paintings. Selected pieces are for sale.">Vividly colourful acrylic paintings. Selected pieces are for sale.</p></li>
+  <li><span class="n">02</span><h3 data-cs="Portréty" data-en="Portraits">Portraits</h3><p data-cs="Portréty oblíbených osobností." data-en="Portraits of favourite personalities.">Portraits of favourite personalities.</p></li>
+  <li><span class="n">03</span><h3 data-cs="Nástěnné malby" data-en="Murals">Murals</h3><p data-cs="Malování přímo na zeď." data-en="Painting directly on the wall.">Painting directly on the wall.</p></li>
  </ul>
 </section>
 <section class="home cform" id="formular">
- <div><h2 data-cs="Napište mi" data-en="Get in touch">Napište mi</h2><p class="lead" data-cs="Zájem o obraz nebo spolupráci? Ozvěte se." data-en="Interested in a painting or a collaboration? Get in touch.">Zájem o obraz nebo spolupráci? Ozvěte se.</p>
-  <div class="ci"><div><span data-cs="E-mail" data-en="Email">E-mail</span><a href="mailto:radekjerman@seznam.cz">radekjerman@seznam.cz</a></div><div><span data-cs="Telefon" data-en="Phone">Telefon</span><a href="tel:+420607193398">+420 607 193 398</a></div></div></div>
+ <div><h2 data-cs="Napište mi" data-en="Get in touch">Get in touch</h2><p class="lead" data-cs="Zájem o obraz nebo spolupráci? Ozvěte se." data-en="Interested in a painting or a collaboration? Get in touch.">Interested in a painting or a collaboration? Get in touch.</p>
+  <div class="ci"><div><span data-cs="E-mail" data-en="Email">Email</span><a href="mailto:radekjerman@seznam.cz">radekjerman@seznam.cz</a></div><div><span data-cs="Telefon" data-en="Phone">Phone</span><a href="tel:+420607193398">+420 607 193 398</a></div></div></div>
 </section>
 <section class="home home-logo" id="podpis" aria-label="Radek Jerman">
  <div class="sigdraw" id="sigdraw"><svg role="img" aria-label="Radek Jerman" viewBox="0 0 63 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,7 +109,7 @@
  <div class="m"><a href="mailto:radekjerman@seznam.cz">radekjerman@seznam.cz</a><a href="tel:+420607193398">+420 607 193 398</a></div>
  <span class="m">© <span id="y"></span> Radek Jerman</span>
 </footer>
-<script src="main.js" defer></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>
