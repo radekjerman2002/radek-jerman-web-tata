@@ -11,10 +11,8 @@
   document.title=T[page][i];document.body.setAttribute("data-page",page);
  }
  function route(){var h=location.hash.slice(1);page=T[h]?h:'obrazy';render();window.scrollTo(0,0)}
- btns.forEach(function(b){b.addEventListener('click',function(){lang=b.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}render()})});
- var s=null;try{s=localStorage.getItem('lang')}catch(e){}
- if(s!=='cs'&&s!=='en'){var n=(navigator.language||'').slice(0,2);s=(n==='cs'||n==='sk')?'cs':'en'}
- lang=s;
+ btns.forEach(function(b){b.addEventListener('click',function(){lang=b.dataset.l;render()})});
+ lang='en';
  window.addEventListener('hashchange',route);
  document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[href^="#"]');
